@@ -28,13 +28,13 @@ for crno in range(1, 10):
         'Chinese Company Name' : tds[2].text_content().encode('utf-8').rpartition('\r')[2].lstrip('\r\n\t'),
         'Company Type' : tds[4].text_content().encode('utf-8')[:-1],
         'Date of incorporation' : tds[6].text_content().encode('utf-8'),
-        'Company status' : tds[8].text_content().encode('utf-8')[:-1],
-        'Active status' : tds[10].text_content().encode('utf-8')[:-1],
-        'Remarks' : tds[11].text_content().encode('utf-8')[16:],
-        'Winding up mode' : tds[13].text_content().encode('utf-8')[:-1],
-        'Date of Dissolution' : tds[15].text_content().encode('utf-8'),
-        'Register of Charges' : tds[17].text_content().encode('utf-8')[:-1],
-        'Important Note' : tds[18].text_content().encode('utf-8')[15:].lstrip('\r\n\t'),
+        # 'Company status' : tds[8].text_content().encode('utf-8')[:-1],
+        'Active status' : tds[8].text_content().encode('utf-8')[:-1],
+        'Remarks' : tds[9].text_content().encode('utf-8')[16:],
+        'Winding up mode' : tds[11].text_content().encode('utf-8')[:-1],
+        'Date of Dissolution' : tds[13].text_content().encode('utf-8'),
+        'Register of Charges' : tds[15].text_content().encode('utf-8')[:-1],
+        'Important Note' : tds[18].text_content().encode('utf-8')[16:].lstrip('\r\n\t'),
         'Name History' : names
         }
         
