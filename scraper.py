@@ -4,6 +4,7 @@ import scraperwiki
 for crno in range(1, 10):
     crnostr = "%07d" % crno
     baseurl = "https://www.mobile-cr.gov.hk/mob/cps_criteria.do?queryCRNO="
+    scraperwiki.scrape("https://www.mobile-cr.gov.hk/mob/locale_us.jsp") # English!
     html = scraperwiki.scrape(baseurl + crnostr).decode('utf-8')
 
     import lxml.html           
