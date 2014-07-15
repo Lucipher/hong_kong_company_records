@@ -16,7 +16,7 @@ for crno in range(1, 10):
         pass
     else:
         for idx, val in enumerate(tds):
-            print idx, ":", val
+            print idx, ":", val.text_content().encode('utf-8')
         print tds[2].text_content().encode('utf-8')
         names = {}
         for namesno in range(len(namestds)):
