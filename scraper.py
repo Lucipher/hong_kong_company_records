@@ -5,7 +5,6 @@ for crno in range(1, 10):
     crnostr = "%07d" % crno
     baseurl = "https://www.mobile-cr.gov.hk/mob/cps_criteria.do?queryCRNO="
     html = scraperwiki.scrape(baseurl + crnostr).decode('utf-8')
-    print html
 
     import lxml.html           
     root = lxml.html.fromstring(html) # , encoding="utf-8")
