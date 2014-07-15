@@ -34,7 +34,7 @@ for crno in range(1, 10):
         'Winding up mode' : tds[11].text_content().encode('utf-8')[:-1],
         'Date of Dissolution' : tds[13].text_content().encode('utf-8'),
         'Register of Charges' : tds[15].text_content().encode('utf-8')[:-1],
-        'Important Note' : tds[18].text_content().encode('utf-8')[16:].lstrip('\r\n\t'),
+        'Important Note' : tds[16].text_content().encode('utf-8')[16:].lstrip('\r\n\t'),
         'Name History' : names
         }
         
