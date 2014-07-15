@@ -15,14 +15,14 @@ for crno in range(1, 10):
     if tds == []:
         pass
     else:
-        print tds[2].text_content()
+        print tds[2].encode('utf-8').text_content()
         names = {}
         for namesno in range(len(namestds)):
             names["Name" + str(namesno)] = namestds[namesno].text_content()
         data = {
         'cr' : tds[1].text_content(),
         'English Company Name' : tds[2].text_content().rsplit('\r')[1].lstrip('\n\t'),
-        'Chinese Company Name' : tds[2].text_content().rpartition('\r')[2].lstrip('\r\n\t'),
+        'Chinese Company Name' : tds[2].encode('utf-8').text_content().rpartition('\r')[2].lstrip('\r\n\t'),
         'Company Type' : tds[4].text_content()[:-1],
         'Date of incorporation' : tds[6].text_content(),
         'Company status' : tds[8].text_content()[:-1],
