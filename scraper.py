@@ -22,7 +22,7 @@ for crno in range(1, 10):
             print idx, ":", val.text_content().encode('utf-8')
         names = {}
         for nameidx, nameval in enumerate(namestds):
-            names["Name" + str(namesidx)] = nameval.text_content()
+            names["Name" + str(nameidx)] = nameval.text_content()
         data = {
         'cr' : tds[1].text_content(),
         'English Company Name' : tds[2].text_content().rsplit('\r')[1].lstrip('\n\t'),
