@@ -1,3 +1,5 @@
+# coding=utf-8
+
 import scraperwiki
 
 # max 1891157
