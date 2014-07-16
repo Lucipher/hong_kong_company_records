@@ -18,8 +18,8 @@ for crno in range(1, maxcr):
     if tds == []:
         pass
     else:
-        for idx, val in enumerate(tds):
-            print idx, ":", val.text_content().encode('utf-8')
+        #for idx, val in enumerate(tds):
+        #    print idx, ":", val.text_content().encode('utf-8')
         names = {}
         for nameidx, nameval in enumerate(namestds):
             names["Name" + str(nameidx)] = nameval.text_content()[10:]
