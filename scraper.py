@@ -29,7 +29,7 @@ for crno in range(1, 10):
         'Date of incorporation' : tds[6].text_content(),
         # 'Company status' : tds[8].text_content()[:-1],
         'Active status' : tds[8].text_content()[:-1],
-        'Remarks' : tds[9].text_content().replace("備註：",""),
+        'Remarks' : tds[9].text_content().replace(u"備註：",""),
         'Winding up mode' : tds[11].text_content()[:-1],
         'Date of Dissolution' : tds[13].text_content(),
         'Register of Charges' : tds[15].text_content()[:-1],
