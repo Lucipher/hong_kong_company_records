@@ -2,8 +2,8 @@
 
 import scraperwiki
 
-# max 1891157
-for crno in range(1, 10):
+maxcr = 2120960
+for crno in range(1, maxcr):
     crnostr = "%07d" % crno
     baseurl = "https://www.mobile-cr.gov.hk/mob/cps_criteria.do?queryCRNO="
     scraperwiki.scrape("https://www.mobile-cr.gov.hk/mob/locale_us.jsp") # English!
