@@ -36,6 +36,7 @@ for crno in range(1, 10):
         'Date of Dissolution' : tds[13].text_content(),
         'Register of Charges' : tds[15].text_content()[:-1],
         'Important Note' : tds[16].text_content()[16:].lstrip('\r\n\t')
-        }.update(names)
+        }
+        data.update(names)
 
     scraperwiki.sqlite.save(unique_keys=['cr'], data=data)
