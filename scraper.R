@@ -3,9 +3,6 @@ library(rvest)
 library(lubridate)
 library(stringr)
 
-maxcr = 150 # 2120960
-mincr = 1
-                                        #mincr = 1686538
 
 deleteslashes <- function(x) {str_replace_all(x, "[\n\t\r]", "")}
 
@@ -80,6 +77,10 @@ if (file.exists("scrapelist.Rdata")) {
     scrapelist <- data.table(crno = "0", companytype = "blah")
     setkey(scrapelist, crno)
 }
+
+maxcr = 2120960
+mincr = scrapelist[,max(as.numeric(crno))]
+
 for (crnonumber in (mincr:maxcr)) {
     if (is.na(scrapelist[sprintf("%07d", crnonumber), companytype])) {
         scrapelist <- scrape(crnonumber, scrapelist)
