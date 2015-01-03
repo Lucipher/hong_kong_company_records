@@ -78,7 +78,7 @@ scrape <- function(crno) {
 #    setkey(scrapelist, crno)
 #}
 
-maxcr = 50 # 2120960
+maxcr = 2120960
 mincr = 1 # scrapelist[,max(as.numeric(crno))]
 
 scrapelist <- mclapply(mincr:maxcr, scrape)
